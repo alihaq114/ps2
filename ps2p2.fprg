@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="envy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-20 12:49:37 PM"/>
+        <attribute name="created" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMDsxMjoxODo1OSBQTTsyODA3"/>
+        <attribute name="edited" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMDsxMjo0OTozNyBQTTszOzI5MTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Item" type="String" array="False" size=""/>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="Up" type="Real" array="False" size=""/>
+            <declare name="exp" type="Real" array="False" size=""/>
+            <output expression="&quot;Which Item did you buy Item A or B? &quot;" newline="True"/>
+            <input variable="Item"/>
+            <output expression="&quot;Enter Quantity&quot;" newline="True"/>
+            <input variable="qty"/>
+            <if expression="Item == &quot;A&quot;">
+                <then>
+                    <assign variable="Up" expression="10.00"/>
+                </then>
+                <else>
+                    <assign variable="Up" expression="20.00"/>
+                </else>
+            </if>
+            <assign variable="exp" expression="qty * Up"/>
+            <output expression="&quot;You bought &quot; &amp; Item &amp; &quot; Unit Price = &quot; &amp; Up &amp; &quot;and total cost = &quot; &amp; exp" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
