@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="envy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-21 12:45:37 AM"/>
+        <attribute name="created" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMTsxMjoxMTozNiBBTTsyNzgx"/>
+        <attribute name="edited" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMTsxMjo0NTozNyBBTTsxOzI4OTc="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastName" type="String" array="False" size=""/>
+            <declare name="nod" type="Real" array="False" size=""/>
+            <declare name="gi" type="Real" array="False" size=""/>
+            <declare name="ngi" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="it" type="Real" array="False" size=""/>
+            <output expression="&quot;enter user last name&quot;" newline="True"/>
+            <input variable="lastName"/>
+            <output expression="&quot;enter number of dependents&quot;" newline="True"/>
+            <input variable="nod"/>
+            <output expression="&quot;enter gross income&quot;" newline="True"/>
+            <input variable="gi"/>
+            <assign variable="ngi" expression="gi - nod * 12000"/>
+            <if expression="ngi &gt;= 50000">
+                <then>
+                    <assign variable="tax" expression=".01"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression=".02"/>
+                </else>
+            </if>
+            <assign variable="It" expression="ngi * tax"/>
+            <output expression="&quot;Your last name is: &quot; &amp; lastName" newline="True"/>
+            <output expression="&quot;Your gross income: &quot; &amp; gi" newline="True"/>
+            <output expression="&quot;Your Number of dependents: &quot; &amp; nod" newline="True"/>
+            <output expression="&quot;your adjusted gross income: &quot; &amp; ngi" newline="True"/>
+            <output expression="&quot;your income tax: &quot; &amp; it" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
