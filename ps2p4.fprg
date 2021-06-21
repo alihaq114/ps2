@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="envy"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-20 07:43:01 PM"/>
+        <attribute name="created" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMDswNzozMTo0MSBQTTsyNzk3"/>
+        <attribute name="edited" value="ZW52eTtERVNLVE9QLUVGS0w1S0k7MjAyMS0wNi0yMDswNzo0MzowMSBQTTsyOzI5MDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="name" type="String" array="False" size=""/>
+            <declare name="cost" type="Integer" array="False" size=""/>
+            <declare name="war" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter name&quot;" newline="True"/>
+            <input variable="name"/>
+            <output expression="&quot;enter cost&quot;" newline="True"/>
+            <input variable="cost"/>
+            <if expression="cost &lt;= 1000">
+                <then>
+                    <assign variable="war" expression=".005"/>
+                </then>
+                <else>
+                    <assign variable="war" expression=".01"/>
+                </else>
+            </if>
+            <assign variable="total" expression="cost * war"/>
+            <output expression="&quot;your name is&quot; &amp; name" newline="True"/>
+            <output expression="&quot;The cost of warantee is &quot; &amp; war" newline="True"/>
+            <output expression="&quot;total cost is &quot; &amp; total" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
